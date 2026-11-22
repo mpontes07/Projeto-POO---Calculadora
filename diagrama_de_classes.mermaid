@@ -1,0 +1,33 @@
+classDiagram
+    class Calculadora {
+        +somar(a: double, b: double) double
+        +subtrair(a: double, b: double) double
+        +multiplicar(a: double, b: double) double
+        +dividir(a: double, b: double) double
+    }
+    class CalculadoraApp {
+        -calc: Calculadora
+        -visor: JLabel
+        -expressao: JLabel
+        -entrada: String
+        -acumulado: double
+        -operador: String
+        -novoNumero: boolean
+        +main(args: String[]) void
+        -criarBotao(texto: String) JButton
+        -aoClicar(t: String) void
+        -aoDigitarTecla(c: char) void
+        -digitar(d: String) void
+        -escolherOperador(op: String) void
+        -igual() void
+        -resolver() double
+    }
+    class BotaoArredondado {
+        +paintComponent(g: Graphics) void
+    }
+    class JFrame
+    class JButton
+    JFrame <|-- CalculadoraApp
+    JButton <|-- BotaoArredondado
+    CalculadoraApp --> Calculadora : usa
+    CalculadoraApp ..> BotaoArredondado : cria

@@ -1,0 +1,6 @@
+*.class
+saida/
+build/
+out/
+.idea/
+.vscode/
