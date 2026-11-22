@@ -1,17 +1,19 @@
-# Calculadora em Java
+# Projeto POO - Calculadora
 
-Calculadora de interface gráfica feita com Java Swing. O projeto contém o código-fonte, o diagrama de classes em Mermaid e um JAR executável.
+Calculadora de interface gráfica feita com Java Swing. O projeto inclui o código-fonte, o diagrama de classes em Mermaid e o launcher Windows `Calculadora.exe`.
 
-## Requisitos
+## Arquivos
 
-- JDK 21 ou mais recente para compilar o código ou gerar o aplicativo Windows.
-- Java 21 ou mais recente para abrir o JAR.
+- `CalculadoraApp.java`: código-fonte da calculadora.
+- `diagrama_de_classes.mermaid`: diagrama editável, também renderizado abaixo pelo GitHub.
+- `Calculadora.exe`: launcher Windows anexado ao projeto.
+- `gerar-exe.bat`: recompila o código e cria uma pasta de aplicativo Windows com runtime Java.
 
-## Executar o JAR
+## Gerar o aplicativo completo para Windows
 
-```bash
-java -jar Calculadora.jar
-```
+É necessário Windows x64 e JDK 21 ou mais recente no `PATH`. Execute `gerar-exe.bat`. O pacote completo será criado em `saida/Calculadora/`; mantenha juntos o executável e os arquivos dessa pasta, incluindo `runtime`.
+
+O `Calculadora.exe` isolado é um launcher do jpackage. Para um pacote autocontido, use a pasta criada pelo script.
 
 ## Compilar e executar pelo código-fonte
 
@@ -20,13 +22,7 @@ javac -encoding UTF-8 CalculadoraApp.java
 java CalculadoraApp
 ```
 
-## Gerar aplicativo para Windows
-
-Em um computador com Windows e JDK 21 ou mais recente no `PATH`, execute `gerar-exe.bat`. O aplicativo será criado em `saida/Calculadora/Calculadora.exe`.
-
 ## Diagrama de classes
-
-O arquivo [`diagrama_de_classes.mermaid`](diagrama_de_classes.mermaid) contém a versão editável. O diagrama também é renderizado pelo GitHub abaixo.
 
 ```mermaid
 classDiagram
